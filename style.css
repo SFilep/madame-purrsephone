@@ -207,3 +207,74 @@ h1 {
         animation: none;
     }
 }
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+
+    main {
+        padding: 12px 14px 20px;
+    }
+
+    .name-container {
+        gap: 6px;
+        margin: 0 0 8px;
+    }
+
+    h1 {
+        font-size: 38px;
+        line-height: 1.1;
+        margin: 8px 0;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin: 8px 0 16px;
+    }
+
+    .oracle-visual {
+        width: 100%;
+        max-width: 280px;
+        margin: 12px auto 28px;
+    }
+
+    .madame-portrait {
+        width: 100%;
+        height: auto;
+    }
+
+    .crystal-ball {
+        width: 120px;
+        height: 120px;
+    }
+
+    .oracle-intro {
+        font-size: 20px;
+        line-height: 1.2;
+        margin: 10px 0;
+    }
+
+    #question-input {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .oracle-message {
+        margin-top: 18px;
+        padding: 14px;
+        min-height: 70px;
+    }
+
+    #oracle-response {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    
+body {
+    padding: 10px 8px;
+}
+
+.oracle-visual {
+    padding-bottom: 45px;
+}
+
+}
