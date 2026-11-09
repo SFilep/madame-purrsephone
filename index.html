@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madame Purrsephone| The Slightly Pawceptive Oracle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+       <div class="name-container">
+    <span class="sparkle sparkle-left">✦</span>
+    <h1>Madame Purrsephone</h1>
+    <span class="sparkle sparkle-right">✧</span>
+</div>
+        <h2>The Slightly Pawceptive Oracle</h2>
+        <div class="oracle-visual">
+    <img
+        src="madame-evermore.png"
+        alt="Madame Evermore, a fluffy gray cat with judgmental golden eyes"
+        class="madame-portrait"
+    >
+
+    <div class="crystal-ball">
+    <img
+        src="crystal-ball.png"
+        alt="A magical crystal ball filled with swirling purple mist"
+    >
+</div>
+</div>
+
+        <p class="oracle-intro">I see all. I judge most.</p>
+
+       <p class="oracle-intro">
+    Ask your question, human.
+    Try to make it interesting.
+</p>
+
+        <input id="question-input" type="text" placeholder="What troubles you, human?">
+
+        <button id="oracle-button">Consult the Oracle</button>
+
+        <div class="oracle-message">
+    <p id="response-label" aria-live="polite">THE ORACLE AWAITS</p>
+    <p id="oracle-response" aria-live="polite">
+        The spirits are currently ignoring you.
+    </p>
+</div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

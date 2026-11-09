@@ -1,0 +1,209 @@
+body {
+    background-color: #1b1026;
+    color: #f5e6c8;
+    font-family: Georgia, serif;
+    text-align: center;
+    margin: 0;
+    padding: 60px 20px;
+}
+
+main {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 40px 25px;
+    background-color: #200735;
+    border: 2px solid #c9a45c;
+    border-radius: 20px;
+}
+
+h1 {
+    color: #e8bf72;
+    font-size: 48px;
+}
+
+h2 {
+    color: #c6a5e8;
+    font-style: italic;
+}
+
+p {
+    line-height: 1.7;
+}
+
+button {
+    background-color: #c9a45c;
+    color: #1b1026;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+.crystal-ball {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 170px;
+    height: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+    animation: float 3s ease-in-out infinite;
+}
+
+.crystal-ball img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.45));
+}
+
+
+.oracle-visual {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 25px auto 20px;
+    padding-bottom: 90px;
+}
+
+/* Madame Evermore is judging you */
+.eye::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -3px;
+    width: 34px;
+    height: 17px;
+    background: #514d59;
+    border-radius: 0 0 50% 50%;
+    z-index: 3;
+}
+
+
+
+
+/* Madame Evermore's official portrait */
+.madame-portrait {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
+    position: relative;
+    z-index: 1;
+}
+
+/* Crystal ball glows while Madame Evermore thinks */
+.crystal-ball.thinking img {
+    animation: magic-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes magic-glow {
+    from {
+        filter: drop-shadow(0 0 10px #a855f7)
+                brightness(1);
+    }
+
+    to {
+        filter: drop-shadow(0 0 35px #d8a0ff)
+                brightness(1.35);
+    }
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Oracle message display */
+.oracle-message {
+    margin-top: 25px;
+    padding: 20px;
+    min-height: 100px;
+    border: 1px solid #c9a45c;
+    border-radius: 12px;
+    background: rgba(27, 16, 38, 0.6);
+}
+
+#response-label {
+    margin: 0 0 12px;
+    color: #c9a45c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#oracle-response {
+    margin: 0;
+    color: #f5e6c8;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Smaller, softer text while thinking */
+.oracle-message.thinking #oracle-response {
+    color: #c6a5e8;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Madame Evermore's title */
+h1 {
+   
+    font-family: "Parisienne", cursive;
+    font-size: 52px;
+    font-weight: 400;
+
+}
+
+/* Madame Evermore's introduction */
+.oracle-intro {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.sparkle {
+    color: #e8c882;
+    font-size: 22px;
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+.sparkle-right {
+    animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.35;
+        transform: scale(0.85);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sparkle {
+        animation: none;
+    }
+}
